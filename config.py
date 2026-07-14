@@ -1,0 +1,2 @@
+ROBOT_ID = "dsr04"
+ROBOT_MODEL = "m0609"
