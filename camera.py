@@ -73,6 +73,9 @@ class RealSenseD435(object):
         return _color_intrinsics_mat, _depth_intrinsics_mat
 
     def get_image(self):
+        # update
+        for _ in range(30):
+            frames = self._pipeline.wait_for_frames()
         while True:
             frames = self._pipeline.wait_for_frames()
             aligned_frames = self._align.process(frames)
@@ -87,3 +90,20 @@ class RealSenseD435(object):
         depth_image = np.asanyarray(depth_frame.get_data())
 
         return color_image, depth_image / 1000
+
+    # update
+    def get_valid_depth(self, depth_image, x, y, radius=3):
+        h, w = depth_image.shape
+
+        x1 = max(0, x - radius) 
+        x2 = min(w, x + radius + 1)
+        y1 = max(0, y - radius)
+        y2 = min(h, y + radius + 1)
+
+        region = depth_image[y1:y2, x1:x2]
+        valid_depths = region[region > 0]
+
+        if valid_depths.size == 0:
+            return None
+
+        return float(np.median(valid_depths))

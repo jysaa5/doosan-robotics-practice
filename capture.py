@@ -8,8 +8,8 @@ def main():
     cv2.imshow("Original Color image", color_img)
     cv2.imshow("Original Depth image", depth_img)
 
-    cv2.imwrite("/home/hyu/ros2_ws/src/doosan-robot2/color_img.png", color_img)
-    cv2.imwrite("/home/hyu/ros2_ws/src/doosan-robot2/depth_img.png", depth_img)
+    cv2.imwrite("/home/jooyeon/ros2_ws/src/doosan-robot2/color_img_1.png", color_img)
+    cv2.imwrite("/home/jooyeon/ros2_ws/src/doosan-robot2/depth_img_1.png", depth_img)
 
     print(f"Color image's shape: {color_img.shape}")
     print(f"Color pixel value: {color_img[360][640]}")
