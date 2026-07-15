@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['cube']
+
+roboflow:
+  workspace: workspace20260715
+  project: cube-jkf3n
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/workspace20260715/cube-jkf3n/dataset/2
