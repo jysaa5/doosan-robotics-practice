@@ -74,7 +74,7 @@ def detect_cubes_once(camera, model):
     return detected_cubes
 
 if __name__ == "__main__":
-    model_path = "/home/hyu/runs/segment/train-8/weights/best.pt"
+    model_path = "/home/jooyeon/ros2_ws/src/doosan-robot2/runs/segment/train-6/weights/best.pt"
     yolo_model = YOLO(model_path)
     camera = RealSenseD435(color_resolution=720, depth_mode="720P")
 
