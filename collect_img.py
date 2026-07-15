@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 from camera import RealSenseD435
 
-output_dir = "/home/hyu/ros2_ws/src/doosan-robot2/cube_dataset"
+output_dir = "/home/jooyeon/ros2_ws/src/doosan-robot2/cube_dataset"
 os.makedirs(output_dir, exist_ok=True)
 os.makedirs(f"{output_dir}/color", exist_ok=True)
 os.makedirs(f"{output_dir}/depth", exist_ok=True)
