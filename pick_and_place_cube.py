@@ -5,7 +5,7 @@ import DR_init
 from robot import Robot
 from camera import RealSenseD435
 from ultralytics import YOLO
-from test_yolo import detect_cubes_once
+from test_yolo_old import detect_cubes_once
 
 from config import ROBOT_ID, ROBOT_MODEL
 
