@@ -462,7 +462,7 @@ def main(args=None):
                 grasp_ready_pose.copy()
             )
 
-            grasp_pose[2] = -226.0
+            grasp_pose[2] = -234.0
 
             # ------------------------------------------------
             # 힘 감지 하강
@@ -486,7 +486,7 @@ def main(args=None):
             for current_z in range(
                 start_z - 5,
                 target_z - 1,
-                -10,
+                -5,
             ):
                 step_pose = (
                     grasp_ready_pose.copy()
